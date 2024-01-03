@@ -1,6 +1,6 @@
 # UAS_PBO_LOKETPEMBELIANLISTRIK_45222210009_RAMADHANI_PRASETYO
 
-Deskripsi singkat project UAS Pemograman Berbasis Object ini.
+Deskripsi singkat project UAS Pemograman Berbasis Object.
 
 ## Daftar Isi
 - [Deskripsi Project](#deskripsi-proyek)
