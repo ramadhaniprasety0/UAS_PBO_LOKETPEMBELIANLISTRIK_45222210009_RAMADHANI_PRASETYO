@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.newpbo.MainController">
+    <children>
+        <AnchorPane prefHeight="160.0" prefWidth="400.0">
+            <children>
+                <TextField fx:id="nomorTextField" layoutX="167.0" layoutY="81.0" prefHeight="26.0" prefWidth="286.0" promptText="Nomor Meter" />
+                <Button fx:id="loginButton" layoutX="389.0" layoutY="119.0" onAction="#loginByNomerMeter" prefHeight="32.0" prefWidth="62.0" style="-fx-font-size: 14px; -fx-padding: 4px; -fx-text-fill: #ffffff; -fx-background-color: #4CAF50; -fx-background-radius: 5px;" text="Check" />
+                <AnchorPane layoutY="162.0" prefHeight="50.0" prefWidth="620.0">
+                    <children>
+                        <GridPane layoutY="1.0" prefHeight="47.0" prefWidth="363.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.00001220703126" minWidth="10.0" prefWidth="199.6" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.79999542236328" minWidth="10.0" prefWidth="86.79999999999998" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label fx:id="saldoLabel" text="Saldo :" GridPane.rowIndex="1" />
+                                <Label fx:id="NamaPelanggan" text="Nama Pengguna :" />
+                                <Label fx:id="NoMeter" text="No Meter :" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label fx:id="kWhLabel" text="kWh :" GridPane.columnIndex="1" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </AnchorPane>
+                <Text fill="RED" layoutX="84.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loket Pembelian Token Pulsa Listrik &amp; Paket Data Online">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+            <Text layoutX="230.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masukan No Meter Listrik :" />
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="92.0" prefWidth="620.0" style="-fx-border-color: #000;">
+            <children>
+            <GridPane layoutX="14.0" layoutY="33.0" prefHeight="98.0" prefWidth="286.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                      <TextField fx:id="jumlahField" alignment="TOP_LEFT" prefHeight="26.0" prefWidth="187.0" promptText="Nominal Pembelian" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Nominal Pembelian :" GridPane.rowIndex="1" />
+                      <Button fx:id="beliTokenButton" onAction="#beliToken" prefHeight="26.0" prefWidth="144.0" style="-fx-font-size: 14px; -fx-padding: 4px; -fx-text-fill: #ffffff; -fx-background-color: #4CAF50; -fx-background-radius: 5px;" text="Beli Token Listrik" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+            <Text fill="#ff5470" layoutX="81.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pembelian Token Listrik :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <GridPane layoutX="320.0" layoutY="33.0" prefHeight="98.0" prefWidth="286.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                      <Button fx:id="beliPaketDataButton" onAction="#beliPaketData" prefHeight="32.0" prefWidth="105.0" style="-fx-font-size: 14px; -fx-padding: 4px; -fx-text-fill: #ffffff; -fx-background-color: #4CAF50; -fx-background-radius: 5px;" text="Beli Paket Data" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="38.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Label text="No Telepon :" GridPane.rowIndex="1" />
+                  <Label text="Nominal Pembelian :" />
+                  <TextField fx:id="jmlPktDataField" GridPane.columnIndex="1" />
+                  <TextField fx:id="noTlpnTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <Text fill="#ff5470" layoutX="392.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pembelian Paket Data :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" top="10.0" />
+            </padding>
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+        </AnchorPane>
+        <TextArea fx:id="transaksiTextArea" prefHeight="114.0" prefWidth="629.0" />
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
